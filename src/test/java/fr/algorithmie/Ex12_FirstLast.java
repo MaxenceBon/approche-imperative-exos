@@ -2,10 +2,12 @@ package fr.algorithmie;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.validator.PublicClassValidator;
 
 import outils.Exercice;
 import outils.ExerciceRunner;
 import outils.Question;
+import outils.Resultat;
 
 /**
  * Ne modifiez ni les noms des classes, ni les noms des méthodes. Utilisez
@@ -34,9 +36,22 @@ public class Ex12_FirstLast {
 		// o elle vaut true si le tableau est de longueur supérieure ou égale à 1 
 		//   et que le premier et le dernier élément du tableau ont la même valeur
 		// o elle vaut false dans les autres cas
-
-		// TODO LOGUEZ la valeur obtenue pour chacun des tableaux tab1 à tab4
-
+		Resultat.log(verifTab(tab1));
+		Resultat.log(verifTab(tab2));
+		Resultat.log(verifTab(tab3));
+		Resultat.log(verifTab(tab4));
 	}
-
+	
+	public boolean verifTab(int[] tab) {
+		boolean verif;
+			
+		if (tab.length > 0 && tab[0] == tab[tab.length-1]) {
+			verif = true;
+		} else {
+			verif = false;
+		}
+		return verif;
+	}
+		// TODO LOGUEZ la valeur obtenue pour chacun des tableaux tab1 à tab4
+	
 }

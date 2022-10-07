@@ -28,7 +28,13 @@ public class Ex07_RechercheMin {
 	public void rechercherMin() {
 		
 		//TODO Grâce à un algorithme, recherchez le minimum du tableau et LOGUEZ le.
-
+		int j=0;
+		for (int i=1;i<array.length;i++) {
+			if (array[i]<array[i-1] && array[i]<j) {
+				j = array[i];
+			}
+		}
+		Resultat.log(j);
 	}
 
 }

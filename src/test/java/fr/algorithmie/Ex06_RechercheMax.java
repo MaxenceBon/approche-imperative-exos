@@ -28,6 +28,13 @@ public class Ex06_RechercheMax {
 	public void rechercherMax() {
 		
 		//TODO Grâce à un algorithme, recherchez le maximum du tableau et LOGUEZ le.
+		int j=0;
+		for (int i=1;i<array.length;i++) {
+			if (array[i]>array[i-1] && array[i]>j) {
+				j = array[i];
+			}
+		}
+		Resultat.log(j);
 	}
 
 }

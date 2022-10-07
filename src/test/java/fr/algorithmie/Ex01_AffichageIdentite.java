@@ -24,7 +24,9 @@ public class Ex01_AffichageIdentite {
 	@Question(numero=1)
 	public void main() {
 		//TODO Utiliser une boucle pour afficher (avec Resultat.log) 10 fois un texte quelconque
-		
+		for (int i=0; i<10; i++) {
+			Resultat.log("Hello World");
+		}
 		// TODO Exemple : 
 		for (int i=1; i<=10; i++) {
 			Resultat.log("Coucou");
