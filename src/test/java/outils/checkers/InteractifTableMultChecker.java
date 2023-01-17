@@ -22,9 +22,9 @@ public class InteractifTableMultChecker extends AbstractChecker {
 		if (premiereLigne.indexOf("=")==-1 || premiereLigne.indexOf("*")==-1) {
 			fail("Vous ne respectez pas le pattern d'affichage : n*1=n");
 		}
-		int nb = Integer.parseInt(premiereLigne.substring(premiereLigne.indexOf("=")+1).replaceAll(" " , ""));
+		int nb = Integer.parseInt(premiereLigne.substring(premiereLigne.indexOf("=")+1));
 		for (int i=1; i<=10; i++) {
-			int value = Integer.parseInt(lignes.get(i-1).substring(lignes.get(i-1).indexOf("=")+1).replaceAll(" " , ""));
+			int value = Integer.parseInt(lignes.get(i-1).substring(lignes.get(i-1).indexOf("=")+1));
 			assertTrue("La valeur affichée est fausse. Elle doit être égale à "+(nb*i), value==nb*i);
 		}
 	}
